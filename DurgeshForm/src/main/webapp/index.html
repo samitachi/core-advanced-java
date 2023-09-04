@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Form Page</title>
+	<style>
+		.container{
+			width: 30%;
+			border:1px solid black;
+			margin:auto;
+			padding:20px;
+			font-size:20px;
+		}
+		
+		#myform table tr id input{
+			font-size:20px;
+		}
+		h1{
+			text-align: center;
+		}
+		
+		input,select{
+			border-radius: .3rem;
+			padding: 10px;
+		}
+		tr{
+			margin-bottom:2rem;
+		}
+		
+		#submit-btn{
+			background: forestgreen;
+			padding: 10px 20px;
+		}
+		
+		#reset-btn{
+			background: lightgrey;
+			padding: 10px 20px;
+		}
+		
+		
+		
+	</style>
+	
+</head>
+
+<body>
+	<div class="container">
+		<h1>My form</h1>
+		<form id="myform" action="RegisterServlet" method="post">
+			<table>
+				<tr>
+					<td>Enter your name:</td>
+					<td><input type="text" name="user_name" placeholder="Enter Here" /></td>
+				</tr>
+
+				<tr>
+					<td>Enter your password:</td>
+					<td><input type="password" name="user_name" placeholder="Enter Here" /></td>
+				</tr>
+
+				<tr>
+					<td>Enter your email:</td>
+					<td><input type="email" name="user_email" placeholder="Enter Here" /></td>
+				</tr>
+
+				<tr>
+					<td>Select Gender</td>
+					<td><input type="radio" name="user_gender" value="male"> Male &nbsp; &nbsp; <input type="radio"
+							name="user_gender" value="female"> Female</td>
+				</tr>
+
+				<tr>
+					<td>
+						select your course
+					</td>
+					<td>
+						<select name="user_course">
+							<option value="Java">Java</option>
+							<option value="Php">PHP</option>
+                            <option value="Python">Python</option>
+                            <option value="cpp">C++</option>
+						</select>
+					</td>
+					
+				</tr>
+				
+				<tr align="center" >
+					
+					<td colspan="2">
+						<input type="checkbox" value "checked" name="condition" />
+						Agree terms and conditions
+					</td>
+				</tr>
+				
+				<tr>
+					<td align="center" colspan="2">
+						<button type="submit" id="submit-btn"> Register</button>
+						<button type="reset" id="reset-btn"> Reset</button>	
+					</td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<script>
+		const button = document.getElementById("submit-btn");
+		button.addEventListener('click', ()=>{
+			alert("Registered Successfully");
+		})
+	</script>
+</body>
+
+</html>
