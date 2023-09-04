@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean class="in.sp.bean.Student" id="stdId">
+		<property name= "name" value="Aayush" />
+		<property name= "rollno" value="101" />
+		<property name="subjmarks">
+		<map>
+		<entry key="C" value="85" />
+		<entry key="C++" value="65" />
+		<entry key="Java" value="95" />
+		<entry key="python" value="84" />
+		</map>
+		</property>
+
+	</bean>
+
+</beans>

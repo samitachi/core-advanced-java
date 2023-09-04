@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- if it was a static method we didnt needed to create bean object to call the method.
+    But since it is not a static method, we have to create bean object. -->
+    <bean class="in.sp.factory.StudentFactory" id="stdFactory" />   
+    <bean class="in.sp.bean.Student" id="stdId" factory-bean="stdFactory"  factory-method="createStobj" >
+    
+</bean>
+
+</beans>
