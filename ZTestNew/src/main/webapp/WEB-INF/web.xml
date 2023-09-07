@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+         <!-- servlet declaration-->
+         <!-- 2 sub-tags of servlet -->
+ <servlet>
+ <servlet-name>first</servlet-name><!-- we can give any name but it used under web app only -->
+ <servlet-class>com.servlet.FirstServlet</servlet-class>
+ </servlet>
+ 
+ <!-- Mapping -->
+ <!-- two sub tags of mapping -->
+ 
+ <servlet-mapping>
+ <servlet-name>first</servlet-name>  <!-- if you want to map this above class"com.servlets.FirstServlet" then write this name"first"-->
+ <url-pattern>/web</url-pattern> <!-- url pattern will be used to execute the servlet  -->
+ <!-- in browser after website url when we write /web, server will identify you want to call "First" servlet and then it will identify the "class" -->
+ </servlet-mapping>
+ 
+ <session-config>
+ <session-timeout>
+ 30
+ </session-timeout>
+ </session-config>    
+ </web-app>    
